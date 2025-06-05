@@ -1,0 +1,286 @@
+{
+    "non_dw": {
+        "animtatedMode": "static",
+        "lineWidth": 0.33,
+        "colorRanges": [
+            {
+                "fromValue": 0.0,
+                "toValue": 2.0,
+                "color": "#c5dfef"
+            },
+            {
+                "fromValue": 2.0,
+                "toValue": 10.0,
+                "color": "#009edb"
+            },
+            {
+                "fromValue": 10.0,
+                "toValue": 30.0,
+                "color": "#004987"
+            },
+            {
+                "fromValue": 30.0,
+                "toValue": 108.0,
+                "color": "#fbaf17"
+            }
+        ],
+        "colorscale": {
+            "mode": "discrete",
+            "colors": [
+                {
+                    "position": 0.0,
+                    "color": "#c5dfef"
+                },
+                {
+                    "position": 0.25,
+                    "color": "#009edb"
+                },
+                {
+                    "position": 0.9811833459626204,
+                    "color": "#004987"
+                }
+            ]
+        },
+        "animatedMode": "animated"
+    },
+    "dw": {
+        "metadata": {
+            "data": {
+                "changes": [],
+                "transpose": false,
+                "vertical-header": true,
+                "horizontal-header": true,
+                "column-format": {
+                    "code": {
+                        "type": "text"
+                    },
+                    "VALUE": {
+                        "type": "number"
+                    },
+                    "countryname": {
+                        "type": "text"
+                    },
+                    "comtrade_code": {
+                        "type": "auto"
+                    },
+                    "cost_gdp_income40": {
+                        "type": "number"
+                    }
+                },
+                "upload-method": "copy"
+            },
+            "describe": {
+                "source-name": "UNDP, WHO and Oxford University, COVID-19 equity dashboard, 2021 (last updated in 2023).",
+                "source-url": "",
+                "intro": "Cost of vaccinating 40% of the population as a share of GDP (2022/2023?)",
+                "byline": "",
+                "aria-description": "",
+                "number-format": "-",
+                "number-divisor": 0,
+                "number-append": "",
+                "number-prepend": ""
+            },
+            "visualize": {
+                "dark-mode-invert": true,
+                "highlighted-series": [],
+                "highlighted-values": [],
+                "sharing": {
+                    "enabled": false,
+                    "url": "https://www.datawrapper.de/_/TBpGO",
+                    "auto": false
+                },
+                "labels": {
+                    "max": 1,
+                    "type": "places",
+                    "places": [],
+                    "enabled": false
+                },
+                "layers": {},
+                "basemap": "world-unctad-2025",
+                "legends": {
+                    "color": {
+                        "size": 170,
+                        "title": "",
+                        "labels": "ranges",
+                        "enabled": true,
+                        "offsetX": 0,
+                        "offsetY": 0,
+                        "reverse": false,
+                        "labelMax": "high",
+                        "labelMin": "low",
+                        "position": "above",
+                        "hideItems": [],
+                        "interactive": false,
+                        "labelCenter": "medium",
+                        "labelFormat": "0,0.[00]",
+                        "orientation": "horizontal",
+                        "customLabels": [],
+                        "titleEnabled": false
+                    },
+                    "pattern": {
+                        "size": 170,
+                        "title": "",
+                        "enabled": true,
+                        "offsetX": 0,
+                        "offsetY": 0,
+                        "position": "above",
+                        "interactive": false,
+                        "orientation": "horizontal",
+                        "titleEnabled": false,
+                        "useColorLegendPosition": true
+                    },
+                    "combined": {
+                        "orientation": "horizontal"
+                    }
+                },
+                "mapView": "full",
+                "miniMap": {
+                    "size": 120,
+                    "type": "region",
+                    "enabled": false,
+                    "offsetX": 1,
+                    "offsetY": 1,
+                    "position": "bottom-left"
+                },
+                "tooltip": {
+                    "body": "%REGION_VALUE%",
+                    "title": "%REGION_NAME%",
+                    "sticky": true,
+                    "enabled": true
+                },
+                "patterns": {
+                    "map": {},
+                    "order": [],
+                    "enabled": false,
+                    "opacity": 50,
+                    "colorType": "auto-contrast"
+                },
+                "zoomable": true,
+                "map-align": "center",
+                "colorscale": {
+                    "map": {},
+                    "mode": "continuous",
+                    "stops": "equidistant",
+                    "colors": [
+                        {
+                            "color": "#C5DFEF",
+                            "position": 0
+                        },
+                        {
+                            "color": "#009EDB",
+                            "position": 0.25
+                        },
+                        {
+                            "color": "#004987",
+                            "position": 0.5
+                        },
+                        {
+                            "color": "#004987",
+                            "position": 0.7642022138871487
+                        },
+                        {
+                            "color": "#004987",
+                            "position": 0.9811833459626204
+                        }
+                    ],
+                    "palette": 0,
+                    "rangeMax": "",
+                    "rangeMin": "",
+                    "stopCount": 5,
+                    "customStops": [
+                        null,
+                        null,
+                        0.1231,
+                        0.2452,
+                        null,
+                        null,
+                        "",
+                        "",
+                        ""
+                    ],
+                    "rangeCenter": "",
+                    "categoryOrder": [],
+                    "interpolation": "equidistant",
+                    "categoryLabels": {}
+                },
+                "map-padding": 0,
+                "map-key-attr": "labelen",
+                "map-type-set": true,
+                "chart-type-set": true,
+                "max-map-height": 650,
+                "min-label-zoom": 1,
+                "zoom-button-pos": "br",
+                "map-label-format": "0,0.[00]",
+                "text-annotations": [],
+                "range-annotations": [],
+                "hide-empty-regions": false,
+                "mapViewCropPadding": 10,
+                "avoid-label-overlap": true,
+                "basemapShowExtraOptions": false
+            },
+            "axes": {
+                "keys": "countryname",
+                "values": "cost_gdp_income40"
+            },
+            "publish": {
+                "embed-width": 600,
+                "embed-height": 470,
+                "blocks": {
+                    "logo": {
+                        "id": "arrow",
+                        "enabled": true
+                    },
+                    "embed": false,
+                    "download-pdf": false,
+                    "download-svg": false,
+                    "get-the-data": false,
+                    "download-image": false
+                },
+                "export-pdf": {},
+                "embed-codes": {
+                    "embed-method-iframe": "<iframe title=\"Africa lags behind in vaccine affordability\" aria-label=\"Map\" id=\"datawrapper-chart-TBpGO\" src=\"https://datawrapper.dwcdn.net/TBpGO/5/\" scrolling=\"no\" frameborder=\"0\" style=\"border: none;\" width=\"600\" height=\"470\" data-external=\"1\"></iframe>",
+                    "embed-method-responsive": "<iframe title=\"Africa lags behind in vaccine affordability\" aria-label=\"Map\" id=\"datawrapper-chart-TBpGO\" src=\"https://datawrapper.dwcdn.net/TBpGO/5/\" scrolling=\"no\" frameborder=\"0\" style=\"width: 0; min-width: 100% !important; border: none;\" height=\"470\" data-external=\"1\"></iframe><script type=\"text/javascript\">!function(){\"use strict\";window.addEventListener(\"message\",(function(a){if(void 0!==a.data[\"datawrapper-height\"]){var e=document.querySelectorAll(\"iframe\");for(var t in a.data[\"datawrapper-height\"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data[\"datawrapper-height\"][t]+\"px\";e[r].style.height=i}}}))}();\n</script>",
+                    "embed-method-web-component": "<div style=\"min-height:470px\" id=\"datawrapper-vis-TBpGO\"><script type=\"text/javascript\" defer src=\"https://datawrapper.dwcdn.net/TBpGO/embed.js\" charset=\"utf-8\" data-target=\"#datawrapper-vis-TBpGO\"></script><noscript><img src=\"https://datawrapper.dwcdn.net/TBpGO/full.png\" alt=\"\" /></noscript></div>"
+                },
+                "autoDarkMode": false,
+                "chart-height": 292
+            },
+            "annotate": {
+                "notes": ""
+            },
+            "custom": {
+                "custom-use": "",
+                "custom-AuthorName": ""
+            }
+        },
+        "title": "Africa lags behind in vaccine affordability",
+        "readonlyKeys": [],
+        "thumbnails": {
+            "full": "//img.datawrapper.de/TBpGO/73de1aa96593c99baaaa5f1afe721dc3/full.png",
+            "plain": "//img.datawrapper.de/TBpGO/73de1aa96593c99baaaa5f1afe721dc3/plain.png"
+        },
+        "publicId": "TBpGO",
+        "language": "en-US",
+        "theme": "unctad",
+        "authorId": 639085,
+        "createdAt": "2025-02-04T10:44:38.000Z",
+        "externalData": "",
+        "forkable": false,
+        "forkedFrom": null,
+        "id": "TBpGO",
+        "isFork": false,
+        "lastEditStep": 5,
+        "lastModifiedAt": "2025-02-10T15:26:13.000Z",
+        "organizationId": "unctad",
+        "publicUrl": "https://datawrapper.dwcdn.net/TBpGO/5/",
+        "publicVersion": 5,
+        "publishedAt": "2025-02-07T08:09:42.000Z",
+        "type": "d3-maps-choropleth",
+        "folderId": 272204,
+        "author": {
+            "name": "GCRG technical team",
+            "email": "unctad-datagcrg@unctad.org"
+        },
+        "url": "/v3/charts/TBpGO"
+    }
+}

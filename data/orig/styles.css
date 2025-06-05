@@ -1,0 +1,538 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Inter', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 300; /* Inter Light */
+    background-color: #f2f8fc;
+}
+
+#appContainer {
+    display: flex;
+    min-height: 100vh;
+}
+
+#sidebar {
+    width: 300px;
+    padding: 20px;
+    background: #f4f4f4;
+    min-height: 100vh;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.right-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* This makes children stack vertically */
+    height: 100vh; /* Fixed height for right content */
+    overflow: hidden; /* Prevents scrolling in right content */
+
+}
+
+#container {
+    flex: 1; /* Takes up all available vertical space except for controls */
+    position: relative;
+    padding: 10px;
+}
+
+#controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Increased gap for better spacing */
+    padding: 10px;
+    background: #f8f8f800;
+}
+
+/* Common Button Styling for All Buttons */
+button {
+    padding: 10px 15px;
+    background-color: #007BFF; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px 0;
+    width: 100%; /* Full width for buttons within containers */
+    text-align: center;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect for all buttons */
+button:hover {
+    background-color: #0056b3; /* Darker blue when hovering */
+}
+
+select {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px 0;
+    width: 100%;
+    text-align: center;
+    appearance: none; /* Removes default browser styling */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 1em;
+}
+
+select:hover {
+    background-color: #0056b3;
+}
+
+select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+/* Style for the dropdown options */
+select option {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 10px;
+}
+
+/* Style download links to look like buttons */
+a.download-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px 0;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Remove underline */
+    box-sizing: border-box; /* fixes width */
+}
+
+a.download-button:hover {
+    background-color: #0056b3;
+}
+
+/* Specific Style for #add-color-range Button */
+#add-color-range {
+    background-color: #007BFF; /* Blue background */
+}
+
+#add-color-range:hover {
+    background-color: #0056b3; /* Darker blue when hovering */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #007BFF;
+    color: white;
+}
+
+.remove-row {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#color-table input[type="number"] {
+    width: 60px; /* Reduced width */
+    text-align: center;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+#color-table input[type="color"] {
+    width: 40px; /* Reduced width */
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+#color-table th, 
+#color-table td {
+    padding: 5px;
+    text-align: center;
+    width: auto;
+    white-space: nowrap;
+}
+
+#color-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Forces table to respect column widths */
+}
+
+
+/* General button styling */
+.upload-button {
+    position: relative; /* Needed for tooltip positioning */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Tooltip hidden by default */
+.tooltip {
+    display: none;
+    position: absolute;
+    top: 120%; /* Position above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: left;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 10;
+}
+
+/* Show tooltip when hovering over the button */
+.upload-button:hover .tooltip {
+    display: block;
+}
+
+/* Optional: Add a small arrow to the tooltip */
+.tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+}
+
+
+
+/* Tooltip for the datawrapper code input */
+.tooltip-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-wrapper:hover .tooltip,
+.tooltip-wrapper:focus-within .tooltip {
+    display: block;
+}
+
+/* Input and button styles (same as before) */
+.code-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.code-input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.code-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.submit-code {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-code:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the Play/Pause Button */
+#playPauseButton {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: fit-content; /* Only take up necessary width */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+
+
+.flash-message {
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Optional: Add animation */
+.flash-message {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hidden-settings summary {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.hidden-settings summary h3 {
+    display: inline;
+    margin: 0;
+    font-size: 1em;
+}
+
+.hidden-settings summary::-webkit-details-marker,
+.hidden-settings summary::marker {
+    color: #666;
+}
+
+.hidden-settings-content {
+    padding: 10px;
+    overflow-x: auto; /* Adds horizontal scroll if needed */
+}
+
+.hidden-settings {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    max-width: 100%;
+}
+
+.settings-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.settings-table th, 
+.settings-table td {
+    padding: 5px;
+    text-align: center;
+    width: auto;
+    white-space: nowrap;
+}
+
+.settings-table input[type="number"] {
+    width: 60px;
+    text-align: center;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.settings-table input[type="color"] {
+    width: 40px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+/* Ensure text boxes fit inside the table */
+.legend-label-input {
+    width: 100%; /* Ensures it stays inside the cell */
+    box-sizing: border-box; /* Prevents overflow */
+    padding: 5px;
+    font-size: 14px;
+}
+
+
+
+.close-icon {
+    font-size: 24px;
+    cursor: pointer;
+    float: right;
+    margin: 10px;
+  }
+  
+  .pie-info-panel {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+    padding: 10px;
+  }
+
+  /* Base layout for desktop */
+  .slider-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .slider-title {
+    font-weight: bold;
+    font-size: 20px;
+    color: #3399ff; /* Light blue */
+    white-space: nowrap;
+    margin-bottom: 10px;
+}
+  
+  .slider-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .slider-labels {
+    display: flex;
+    justify-content: space-between;
+    width: 450px; 
+    margin-bottom: 4px;
+  }
+  
+  .slider-labels span {
+    width: 150px; /* = 0.5 * slider width */
+    text-align: center;
+    font-weight: 300;
+    font-size: 14px;
+  }
+
+  .slider-labels span strong {
+    font-weight: 600; /* Or 500–700 depending on how bold you want it */
+  }
+  
+  #tariff_structureSlider {
+    width: 300px;
+  }
+  
+  /* Mobile optimization */
+  @media (max-width: 500px) {
+    .slider-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .slider-title {
+        font-weight: bold;
+        font-size: 20px;
+        color: #3399ff; /* Light blue */
+        white-space: nowrap;
+        margin-bottom: 10px;
+    }
+  
+    .slider-labels {
+        width: 300px;
+    }
+
+    .slider-labels span {
+        width: 100px; /* 0.5 * 200px slider */
+        font-size: 12px;
+      }
+
+    #tariff_structureSlider {
+      width: 200px;
+    }
+  
+  }
+
+
+  #pieOverlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 1000px; /* Increased to fit 3 charts + labels comfortably */
+    max-height: 90vh;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 999;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    background-color: white; 
+  }
+  
+  #pieOverlay.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  #overlayChartsRow {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 2.3fr;
+    gap: 20px;
+    align-items: start;
+  }
+  
+  .y-axis-labels {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 420px;
+    font-size: 12px;
+    text-align: right;
+    padding-right: 12px; /* more breathing room for labels */
+  }
+  
+  .bar-container,
+  .pie-container {
+    height: 480px;
+    min-width: 250px;
+  }
+
+  #mapTitleBlock {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  
+  #container {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
