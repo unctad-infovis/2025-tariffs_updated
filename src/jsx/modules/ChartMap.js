@@ -483,7 +483,7 @@ const MapChart = () => {
           color: 'rgba(0, 0.0, 0.0, 0.8)',
           fontSize: '13px'
         },
-        text: '<em>Source:</em> UN Trade and Development (UNCTAD) based on UN Comtrade, UNCTAD TRAINS and Presidential actions, including the Executive Orders published by the White House.<br /><em>Note:</em> Trade weights for the year 2023. Data as of 17 June 2025. <a href="https://unctad.org/page/map-disclaimer" target="_blank">Map disclaimer</a>',
+        text: '<em>Source:</em> UN Trade and Development (UNCTAD) based on UN Comtrade, UNCTAD TRAINS and Presidential actions, including the Executive Orders published by the White House.<br /><em>Note:</em> Trade weights for the year 2023. Data as of 18 June 2025. <a href="https://unctad.org/page/map-disclaimer" target="_blank">Map disclaimer</a>',
         useHTML: true,
         verticalAlign: 'bottom',
         x: 0
