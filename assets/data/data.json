@@ -1104,38 +1104,6 @@
     "code": "586"
   },
   {
-    "ISO3": "BLR",
-    "exp_name": "Belarus",
-    "LDC": 0,
-    "LLDC": 0,
-    "SIDS_UNCTAD_plus": 0,
-    "vulnerable": false,
-    "unctad_development_status": "developed",
-    "total_imports": 49927785,
-    "change_old": 17.2997,
-    "change": 17.2997,
-    "dev_status": "Developed",
-    "tariff_structure": 2,
-    "value": 18.5847,
-    "code": "112"
-  },
-  {
-    "ISO3": "BLR",
-    "exp_name": "Belarus",
-    "LDC": 0,
-    "LLDC": 0,
-    "SIDS_UNCTAD_plus": 0,
-    "vulnerable": false,
-    "unctad_development_status": "developed",
-    "total_imports": 49927785,
-    "change_old": 17.2997,
-    "change": 17.2997,
-    "dev_status": "Developed",
-    "tariff_structure": 3,
-    "value": 18.5847,
-    "code": "112"
-  },
-  {
     "ISO3": "TUR",
     "exp_name": "Tï¿½rkiye",
     "LDC": 0,
