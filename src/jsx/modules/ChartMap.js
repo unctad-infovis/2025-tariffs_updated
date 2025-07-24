@@ -214,10 +214,15 @@ const MapChart = () => {
             currentPoint[1] += dy; // Cumulative change in y
           }
 
-          // Apply the transformation to convert from projected to lat/lon
+          // // Apply the transformation to convert from projected to lat/lon
+          // return [
+          //   currentPoint[0] * transform.scale[0] + transform.translate[0],
+          //   currentPoint[1] * transform.scale[1] + transform.translate[1]
+          // ];
+          const coordinateScaleFactor = 1 / 100000;
           return [
-            currentPoint[0] * transform.scale[0] + transform.translate[0],
-            currentPoint[1] * transform.scale[1] + transform.translate[1]
+            (currentPoint[0] * transform.scale[0] + transform.translate[0]) * coordinateScaleFactor,
+            (currentPoint[1] * transform.scale[1] + transform.translate[1]) * coordinateScaleFactor
           ];
         });
 
@@ -289,9 +294,14 @@ const MapChart = () => {
           }
 
           // Apply the transformation to convert from projected to lat/lon
+          // return [
+          //   currentPoint[0] * transform.scale[0] + transform.translate[0],
+          //   currentPoint[1] * transform.scale[1] + transform.translate[1]
+          // ];
+          const coordinateScaleFactor = 1 / 100000;
           return [
-            currentPoint[0] * transform.scale[0] + transform.translate[0],
-            currentPoint[1] * transform.scale[1] + transform.translate[1]
+            (currentPoint[0] * transform.scale[0] + transform.translate[0]) * coordinateScaleFactor,
+            (currentPoint[1] * transform.scale[1] + transform.translate[1]) * coordinateScaleFactor
           ];
         });
 
@@ -382,9 +392,9 @@ const MapChart = () => {
           code,
           color: bubbleColor,
           cursor: 'pointer',
-          lat: coords.lat,
+          lat: coords.lat / 100000,
           lineWidth: 0,
-          lon: coords.lon,
+          lon: coords.lon / 100000,
           marker: {
             lineColor: bubbleColor,
             states: {
