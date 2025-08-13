@@ -565,6 +565,9 @@ const MapChart = () => {
         },
         enabled: true
       },
+      mapView: {
+        padding: 10,
+      },
       plotOptions: {
         series: {
           tooltip: {
