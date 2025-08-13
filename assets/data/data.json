@@ -6059,7 +6059,7 @@
     "dev_status": "Developed",
     "tariff_structure": 1,
     "value": 2.5617,
-    "code": "757"
+    "code": "756"
   },
   {
     "ISO3": "CHE",
@@ -6073,7 +6073,7 @@
     "dev_status": "Developed",
     "tariff_structure": 2,
     "value": 9.2479,
-    "code": "757"
+    "code": "756"
   },
   {
     "ISO3": "CHE",
@@ -6087,7 +6087,7 @@
     "dev_status": "Developed",
     "tariff_structure": 3,
     "value": 24.917,
-    "code": "757"
+    "code": "756"
   },
   {
     "ISO3": "JAM",
