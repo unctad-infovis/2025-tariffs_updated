@@ -496,7 +496,7 @@ const MapChart = () => {
           color: 'rgba(0, 0.0, 0.0, 0.8)',
           fontSize: '13px'
         },
-        text: '<em>Source:</em> UN Trade and Development (UNCTAD) based on USITC and US presidential actions, including the Executive Orders published by the White House.<br /><em>Note:</em> Trade weights for the year 2023. Data as of 3 September 2025. <a href="https://unctad.org/page/map-disclaimer" target="_blank">Map disclaimer</a>',
+        text: '<em>Source:</em> UN Trade and Development (UNCTAD) based on USITC and US presidential actions, including the Executive Orders published by the White House.<br /><em>Note:</em> Trade weights are for the year 2024. Tariffs are calculated at the HS 8-digit level. Tariffs during the 90-day pause reflect the situation as of 18 June 2025. The analysis excludes Section 232 steel and aluminum tariffs on derivatives under HS chapters 1-70, where the additional duty applies only to the metal content and this content can be expected to be low. Data update as of 4 September 2025. <a href="https://unctad.org/page/map-disclaimer" target="_blank">Map disclaimer</a>',
         useHTML: true,
         verticalAlign: 'bottom',
         x: 0
