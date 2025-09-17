@@ -502,7 +502,7 @@ const MapChart = () => {
         x: 0
       },
       chart: {
-        height: Math.max((document.getElementById('map_container').offsetWidth * 9) / 16, 400),
+        height: Math.max((document.getElementById('map_container').offsetWidth * 9) / 16, 600),
         backgroundColor: '#f4f9fd',
         events: {
           load() {
