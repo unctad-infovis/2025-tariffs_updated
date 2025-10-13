@@ -798,45 +798,6 @@
     "code": "520"
   },
   {
-    "ISO3": "LIE",
-    "Country": "Liechtenstein",
-    "LDC": 0,
-    "LLDC": 0,
-    "SIDS_UNCTAD_plus": 0,
-    "vulnerable": false,
-    "unctad_development_status": "developed",
-    "total_imports": 241138492,
-    "dev_status": "Developed",
-    "tariff_structure": 1,
-    "value": 9.1956
-  },
-  {
-    "ISO3": "LIE",
-    "Country": "Liechtenstein",
-    "LDC": 0,
-    "LLDC": 0,
-    "SIDS_UNCTAD_plus": 0,
-    "vulnerable": false,
-    "unctad_development_status": "developed",
-    "total_imports": 241138492,
-    "dev_status": "Developed",
-    "tariff_structure": 2,
-    "value": 23.9848
-  },
-  {
-    "ISO3": "LIE",
-    "Country": "Liechtenstein",
-    "LDC": 0,
-    "LLDC": 0,
-    "SIDS_UNCTAD_plus": 0,
-    "vulnerable": false,
-    "unctad_development_status": "developed",
-    "total_imports": 241138492,
-    "dev_status": "Developed",
-    "tariff_structure": 3,
-    "value": 28.4738
-  },
-  {
     "ISO3": "IDN",
     "Country": "Indonesia",
     "LDC": 0,
@@ -3998,7 +3959,7 @@
     "dev_status": "Developed",
     "tariff_structure": 1,
     "value": 0.9628,
-    "code": "579"
+    "code": "578"
   },
   {
     "ISO3": "NOR",
@@ -4012,7 +3973,7 @@
     "dev_status": "Developed",
     "tariff_structure": 2,
     "value": 7.8153,
-    "code": "579"
+    "code": "578"
   },
   {
     "ISO3": "NOR",
@@ -4026,7 +3987,7 @@
     "dev_status": "Developed",
     "tariff_structure": 3,
     "value": 10.6262,
-    "code": "579"
+    "code": "578"
   },
   {
     "ISO3": "ISR",
@@ -6379,45 +6340,6 @@
     "tariff_structure": 3,
     "value": 4.4632,
     "code": "184"
-  },
-  {
-    "ISO3": "MCO",
-    "Country": "Monaco",
-    "LDC": 0,
-    "LLDC": 0,
-    "SIDS_UNCTAD_plus": 0,
-    "vulnerable": false,
-    "unctad_development_status": "developed",
-    "total_imports": 121911982,
-    "dev_status": "Developed",
-    "tariff_structure": 1,
-    "value": 0.5517
-  },
-  {
-    "ISO3": "MCO",
-    "Country": "Monaco",
-    "LDC": 0,
-    "LLDC": 0,
-    "SIDS_UNCTAD_plus": 0,
-    "vulnerable": false,
-    "unctad_development_status": "developed",
-    "total_imports": 121911982,
-    "dev_status": "Developed",
-    "tariff_structure": 2,
-    "value": 4.2501
-  },
-  {
-    "ISO3": "MCO",
-    "Country": "Monaco",
-    "LDC": 0,
-    "LLDC": 0,
-    "SIDS_UNCTAD_plus": 0,
-    "vulnerable": false,
-    "unctad_development_status": "developed",
-    "total_imports": 121911982,
-    "dev_status": "Developed",
-    "tariff_structure": 3,
-    "value": 4.4427
   },
   {
     "ISO3": "CMR",
